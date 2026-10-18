@@ -9,7 +9,10 @@
     --card-radius: 18px;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; outline: none; }
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+:focus-visible { outline: 3px solid var(--primary-accent); outline-offset: 4px; }
+button.card { width: 100%; font: inherit; text-align: left; }
 
 body {
     font-family: 'Tajawal', sans-serif;
@@ -244,3 +247,8 @@ footer { margin-top: 40px; text-align: center; font-size: 0.8rem; color: var(--t
     border: 1px solid var(--text-secondary); color: var(--text-primary);
 }
 .btn-code:hover { background: #fff; color: #000; border-color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
